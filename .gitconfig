@@ -1,0 +1,11 @@
+[include]
+path = .gitconfig.d/all.gitconfig
+[includeIf "gitdir:~/repositories/work/**"]
+path = .gitconfig.d/work.gitconfig
+
+[credential]
+	helper = store
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main

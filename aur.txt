@@ -1,0 +1,15 @@
+azure-cli-bin
+bluez-git
+brave-bin
+jetbrains-toolbox
+libnvidia-container
+libnvidia-container-tools
+lightdm-settings
+mkinitcpio-numlock
+nvidia-container-runtime
+nvidia-container-toolkit
+nvidia-docker
+openshift-client-bin
+visual-studio-code-bin
+yay
+zsh-theme-powerlevel10k-git

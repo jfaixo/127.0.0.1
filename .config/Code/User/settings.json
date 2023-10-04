@@ -1,0 +1,8 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', 'monospace', monospace",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
+}

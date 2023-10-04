@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1689554038431676-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Open terminal</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>visual-studio-code</icon>
+	<name>Open Code here</name>
+	<submenu></submenu>
+	<unique-id>1690016014002719-1</unique-id>
+	<command>code  %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+</actions>

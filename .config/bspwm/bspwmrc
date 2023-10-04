@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# Set display from arandr saved script
+sh ~/.screenlayout/default.sh &
+
+# bspc
+bspc monitor DP-0 -d I II III IV V
+bspc monitor DP-2 -d I II III IV V
+
+bspc config border_width            1
+bspc config presel_feedback_color   "#3574f0"
+
+bspc config window_gap              12
+
+bspc config split_ratio             0.5
+bspc config single_monocle          true
+bspc config borderless_monocle      true
+bspc config gapless_monocle         false
+
+bspc config focus_follows_pointer   true
+
+bspc rule -a Gimp state=floating follow=
+bspc rule -a xfce4-popup-clipman state=floating follow=on
+bspc rule -a blueman-applet state=floating follow=on
+bspc rule -a pavucontrol state=floating follow=on
+bspc rule -a Screenkey manage=off
+
+#
+# Startup
+#
+
+# sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Compositor
+picom -b --config ~/.config/picom/picom.conf
+
+# Bars
+polybar left-dp-0 &
+polybar middle-dp-0 &
+polybar right-dp-0 &
+polybar left-dp-2 &
+
+# Notification
+dunst &
+
+# Wallpaper
+nitrogen --restore &
+
+# Polkit
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Clipboard manager
+xfce4-clipman &
+
+# Blueman applet for system tray icon
+blueman-applet &
